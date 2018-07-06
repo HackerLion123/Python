@@ -1,11 +1,22 @@
+import random
 
-class board:
+
+class Board:
 	def __init__(self,length,breadth):
-		pass
-	def display():
-		pass
+		board = [[" "]*length]*breadth
 
-class player:
+	def random_snakes(self):
+		for i in range(0,5):
+
+	def display(self):
+		print("---------------------------------------------------------------------------------------------------------------------------------------");
+		for each in board:
+			for e in each:
+				print("|"+e,end=" ")
+			print()
+
+
+class Player:
 	"""players in the game"""
 	def __init__(self, name,gamesPlayed = 0,wins = 0):
 		self._name = name
@@ -16,7 +27,7 @@ class player:
 	def name(self):
 		return self._name
 
-_	@property
+	@property
 	def gamesPlayed(self):
 		return self._gamesPlayed
 	
@@ -68,6 +79,8 @@ def main():
 
 	players = input("Enter the number of players ")
 
-	boardsize = input("Select a board Size 64x48 or 100x64 ")
+	board = Board(16,16)
 
-
+	
+if __name__ == '__main__':
+	main()

@@ -21,10 +21,11 @@ class Number:
 			print("ERROR: Not a number\n")
 
 	def __add__(self,num2):
-		if 
+		pass
 
 num1 = Number(30,'integer')
 
 num1 = Number(60,'integer')
 
 print(len(num1))
+print(dir(6))

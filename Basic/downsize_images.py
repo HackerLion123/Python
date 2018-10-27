@@ -6,7 +6,7 @@ import shutil
 
 
 """
-	Downsize images to 64 x 60 using opencv and also convert to gray scale
+	Downsize images to 64 x 64 using opencv and also convert to gray scale
 """
 
 
@@ -17,7 +17,7 @@ def downsize(url):
 	#plt.imshow(image)
 
 
-	down_sized = cv2.resize(image,(64,60))
+	down_sized = cv2.resize(image,(64,64))
 
 	#down_sized = cv2.cvtColor(down_sized,cv2.COLOR_BGR2GRAY)
 
@@ -28,15 +28,15 @@ def main():
 	pwd = "/root/" + folder_name
 
 	for f in os.listdir("."):
-		if ('.jpg' in f or '.png' in f or '.jpeg' in f) and '_64x60' not in f:	
+		if ('.jpg' in f or '.png' in f or '.jpeg' in f) and '_64x64' not in f:	
 			down_sized = downsize(f)
 		
-			cv2.imwrite(f[:-4] + "_64x60.png",down_sized)	
+			cv2.imwrite(f[:-4] + "_64x64.png",down_sized)	
 
 		#plt.imshow(down_sized)
 
 	for f in os.listdir("."):
-		if "_64x60" in f:
+		if "_64x64" in f:
 			shutil.move(f,pwd)
 
 if __name__ == '__main__':

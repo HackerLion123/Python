@@ -23,10 +23,11 @@ class Edge:
 class Digraph:
 	
 	def __init__(self):
-		pass
+		self.nodes = []
+		self.edges = []
 
-	def addNode(self):
-		pass
+	def addNode(self,node):
+		self.nodes.append(node)
 
 	def addEdge(self):
 		pass
